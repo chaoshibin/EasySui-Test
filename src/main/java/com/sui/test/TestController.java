@@ -3,7 +3,7 @@ package com.sui.test;
 import com.easysui.common.util.Result;
 import com.easysui.distribute.lock.annotation.EasyLock;
 import com.easysui.log.annotation.EasyLog;
-import com.easysui.web.annotation.EasyValidate;
+import com.easysui.validate.annotation.EasyValidate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,7 +17,7 @@ public class TestController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public String test(Student student){
+    public String test(Student student) {
         return "";
     }
 
@@ -25,7 +25,7 @@ public class TestController {
     @ResponseBody
     @EasyLog(title = "测试EasyLog")
     @EasyValidate
-    public Result<Student> testLog(Student student){
+    public Result<Student> testLog(Student student) {
         student.setAddress("在哪里");
         return Result.ok(student);
     }
@@ -34,8 +34,8 @@ public class TestController {
     @ResponseBody
     @EasyLog(title = "测试日志")
     @EasyValidate
-    @EasyLock(prefix = "test", key = {"#s.age","#s.address"})
-    public Result<Student> testComponent(Student s){
+    @EasyLock(name = "test", key = {"#s.age", "#s.address"})
+    public Result<Student> testComponent(Student s) {
         s.setAddress("在哪里");
         return Result.ok(s);
     }

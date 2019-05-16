@@ -2,7 +2,7 @@ package com.sui.test;
 
 import com.easysui.distribute.lock.aspect.EasyLockAspect;
 import com.easysui.log.aspect.EasyLogAspect;
-import com.easysui.web.aspect.EasyValidateAspect;
+import com.easysui.validate.aspect.EasyValidateAspect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -15,17 +15,17 @@ public class TestApplication {
     }
 
     @Bean
-    public EasyLogAspect easyLogAspect(){
+    public EasyLogAspect easyLogAspect() {
         return new EasyLogAspect();
     }
 
     @Bean
-    public EasyValidateAspect easyValidateAspect(){
+    public EasyValidateAspect easyValidateAspect() {
         return new EasyValidateAspect();
     }
 
     @Bean
-    public EasyLockAspect easyLockAspect(){
+    public EasyLockAspect easyLockAspect() {
         return new EasyLockAspect();
     }
 }

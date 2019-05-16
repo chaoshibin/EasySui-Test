@@ -29,20 +29,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>com.easysui</groupId>
-            <artifactId>easysui-log</artifactId>
+            <artifactId>easysui-all</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.easysui</groupId>
-            <artifactId>easysui-validate</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.easysui</groupId>
-            <artifactId>easysui-distribute-lock</artifactId>
+            <artifactId>easysui-common</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>
