@@ -1,10 +1,11 @@
-package com.sui.test;
+package com.sui.starter.test.controller;
 
 import com.easysui.cache.annotation.EasyCachePut;
 import com.easysui.core.util.Result;
 import com.easysui.distribute.lock.annotation.EasyLock;
 import com.easysui.log.annotation.EasyLog;
 import com.easysui.validate.annotation.EasyValidate;
+import com.sui.starter.test.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

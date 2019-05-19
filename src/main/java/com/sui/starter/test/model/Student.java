@@ -1,7 +1,6 @@
-package com.sui.test;
+package com.sui.starter.test.model;
 
 import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 /**
