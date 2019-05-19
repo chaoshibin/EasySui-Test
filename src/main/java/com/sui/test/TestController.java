@@ -1,6 +1,6 @@
 package com.sui.test;
 
-import com.easysui.common.util.Result;
+import com.easysui.core.util.Result;
 import com.easysui.distribute.lock.annotation.EasyLock;
 import com.easysui.log.annotation.EasyLog;
 import com.easysui.validate.annotation.EasyValidate;
