@@ -1,5 +1,6 @@
 package com.sui.test;
 
+import com.easysui.cache.annotation.EasyCachePut;
 import com.easysui.core.util.Result;
 import com.easysui.distribute.lock.annotation.EasyLock;
 import com.easysui.log.annotation.EasyLog;
@@ -7,6 +8,7 @@ import com.easysui.validate.annotation.EasyValidate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 
 /**
  * @author CHAO 2019/5/15 0:30
@@ -25,7 +27,7 @@ public class TestController {
     @ResponseBody
     @EasyLog(title = "测试EasyLog")
     @EasyValidate
-    public Result<Student> testLog(Student student) {
+    public com.easysui.core.util.Result<Student> testLog(Student student) {
         student.setAddress("在哪里");
         return Result.ok(student);
     }
@@ -34,8 +36,16 @@ public class TestController {
     @ResponseBody
     @EasyLog(title = "测试日志")
     @EasyValidate
-    @EasyLock(name = "test", key = {"#s.age", "#s.address"})
+    @EasyCachePut(cacheName = "123", key = {"#s.age", "#s.address"})
     public Result<Student> testComponent(Student s) {
+        s.setAddress("在哪里");
+        return Result.error("");
+    }
+
+    @RequestMapping("/testLock")
+    @ResponseBody
+    @EasyLock(name = "test", key = {"#s.age", "#s.address"})
+    public Result<Student> testLock(Student s) {
         s.setAddress("在哪里");
         return Result.ok(s);
     }

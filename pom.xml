@@ -10,12 +10,13 @@
     </parent>
     <groupId>com.easysui</groupId>
     <artifactId>easysui-spring-boot-starter-test</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>test</name>
-    <description>easysui Spring Boot starter test</description>
+    <description>Easysui Starter Test for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <easysui.version>1.0.0</easysui.version>
     </properties>
 
     <dependencies>
@@ -23,6 +24,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -34,9 +36,24 @@
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.easysui</groupId>
-            <artifactId>easysui-common</artifactId>
-            <version>1.0.0</version>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.2.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.1.6.RELEASE</version>
         </dependency>
     </dependencies>
 
@@ -48,4 +65,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
