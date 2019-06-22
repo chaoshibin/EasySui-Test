@@ -40,7 +40,7 @@ public class TestController {
     @EasyCachePut(cacheName = "123", key = {"#s.age", "#s.address"})
     public Result<Student> testComponent(Student s) {
         s.setAddress("在哪里");
-        return Result.error("");
+        return Result.ok(s);
     }
 
     @RequestMapping("/testLock")

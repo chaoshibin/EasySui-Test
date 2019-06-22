@@ -9,9 +9,10 @@ easysui:
     validate:
         enabled: true
     cache:
-        enabled: true
+        enabled: false
     jedis:
-        #Host: 127.0.0.1
+        enabled: false
+        host: 127.0.0.1
         port: 12345
         password: 123456
         max-total: 200
@@ -19,11 +20,13 @@ easysui:
         min-idle: 50
         max-wait-millis: 500
     zookeeper:
+        enabled: false
         connection-string: 127.0.0.1:2181
         namespace: ring/lock
         session-timeout-ms: 60000
         connection-timeout-ms: 15000
     http:
+        enabled: false
         socket-timeout-ms: 30000
         connect-timeout-ms: 30000
         connection-request-timeout-ms: 200
