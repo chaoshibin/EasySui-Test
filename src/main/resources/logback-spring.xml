@@ -164,6 +164,14 @@
         </filter>
     </appender>
 
+    <root level="DEBUG"> <!--level == DEBUG/INFO/WARN/ERROR-->
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG"/>
+        <appender-ref ref="INFO"/>
+        <appender-ref ref="WARN"/>
+        <appender-ref ref="ERROR"/>
+    </root>
+
     <springProfile name="dev">
         <root level="DEBUG"> <!--level == DEBUG/INFO/WARN/ERROR-->
             <appender-ref ref="CONSOLE"/>
