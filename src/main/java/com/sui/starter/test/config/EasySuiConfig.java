@@ -6,7 +6,7 @@ import com.easysui.starter.annotation.EnableEasyValidation;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author CHAO 2019/8/24 19:40
+ * @author Chao Shibin 2019/8/24 19:40
  */
 @Configuration
 @EnableEasyLock

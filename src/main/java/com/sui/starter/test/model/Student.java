@@ -1,11 +1,14 @@
 package com.sui.starter.test.model;
 
+import lombok.ToString;
+
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author CHAO 2019/5/15 0:39
+ * @author Chao Shibin 2019/5/15 0:39
  */
+@ToString
 public class Student {
     private String name;
 

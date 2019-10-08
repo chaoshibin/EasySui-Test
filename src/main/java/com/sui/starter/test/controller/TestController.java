@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
- * @author CHAO 2019/5/15 0:30
+ * @author Chao Shibin 2019/5/15 0:30
  */
 @Controller
 @RequestMapping("")
@@ -31,7 +31,7 @@ public class TestController {
     @ResponseBody
     @EasyLog(title = "测试EasyLog")
     @EasyValidation
-    public com.easysui.core.util.Result<Student> testLog(Student student) {
+    public Result<Student> testLog(Student student) {
         student.setAddress("在哪里");
         return Result.ok(student);
     }
